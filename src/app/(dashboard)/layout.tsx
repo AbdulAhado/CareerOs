@@ -13,7 +13,7 @@ export default function DashboardLayout({
       <TooltipProvider>
         <SidebarProvider>
           <AppSidebar />
-          <main className="flex-1 flex flex-col min-h-screen relative w-full">
+          <main className="flex-1 flex flex-col min-h-screen relative w-full min-w-0 max-w-full overflow-x-hidden">
             <div className="absolute top-4 left-4 z-50 md:hidden">
               <SidebarTrigger />
             </div>

@@ -48,6 +48,11 @@ const data = {
           icon: LayoutDashboard,
         },
         {
+          title: "Resume Builder",
+          url: "/resume-builder",
+          icon: PenTool,
+        },
+        {
           title: "AI Career Coach",
           url: "/coach",
           icon: Bot,
@@ -86,11 +91,6 @@ const data = {
           title: "Proposal Generator",
           url: "/proposal-generator",
           icon: Sparkles,
-        },
-        {
-          title: "Resume Builder",
-          url: "/resume-builder",
-          icon: PenTool,
         },
         {
           title: "LinkedIn Optimizer",
@@ -157,24 +157,25 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>
-              {/* @ts-ignore */}
-              <DropdownMenuTrigger asChild>
-                <SidebarMenuButton
-                  size="lg"
-                  render={<div />}
-                  className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground cursor-pointer"
-                >
-                  <Avatar className="h-8 w-8 rounded-lg">
-                    <AvatarImage src={user?.image || ""} alt={user?.name || ""} />
-                    <AvatarFallback className="rounded-lg bg-primary/10 text-primary font-bold">
-                      {user?.name?.charAt(0)?.toUpperCase() || <User className="h-4 w-4" />}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div className="grid flex-1 text-left text-sm leading-tight">
-                    <span className="truncate font-semibold">{user?.name || "Guest User"}</span>
-                    <span className="truncate text-xs text-muted-foreground">{user?.email || "Not signed in"}</span>
-                  </div>
-                </SidebarMenuButton>
+              <DropdownMenuTrigger
+                render={
+                  <SidebarMenuButton
+                    size="lg"
+                    render={<button type="button" />}
+                    className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground cursor-pointer"
+                  />
+                }
+              >
+                <Avatar className="h-8 w-8 rounded-lg">
+                  <AvatarImage src={user?.image || ""} alt={user?.name || ""} />
+                  <AvatarFallback className="rounded-lg bg-primary/10 text-primary font-bold">
+                    {user?.name?.charAt(0)?.toUpperCase() || <User className="h-4 w-4" />}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="grid flex-1 text-left text-sm leading-tight">
+                  <span className="truncate font-semibold">{user?.name || "Guest User"}</span>
+                  <span className="truncate text-xs text-muted-foreground">{user?.email || "Not signed in"}</span>
+                </div>
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-xl border border-border bg-popover p-2 shadow-md"

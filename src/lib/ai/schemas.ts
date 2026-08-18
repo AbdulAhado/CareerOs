@@ -141,10 +141,11 @@ export const INTERVIEW_QUESTIONS_SCHEMA = `{
   ${CONFIDENCE_BLOCK_SCHEMA},
   "questions": [
     {
-      "question": "<the interview question>",
-      "type": "<behavioral|technical|scenario|problem-solving|system-design|communication|leadership>",
+      "question": "<short 1-sentence realistic interview question>",
+      "category": "<Theoretical|Practical|Technical>",
+      "type": "<Theoretical|Practical|Technical>",
       "difficulty": "<easy|medium|hard>",
-      "evaluationCriteria": "<what a great answer looks like>"
+      "evaluationCriteria": "<what a great answer looks like in 1 sentence>"
     }
   ]
 }`

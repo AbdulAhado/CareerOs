@@ -21,7 +21,7 @@ export const openrouter = new OpenAI({
  */
 export async function generateAIResponse(
   messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[],
-  model: string = "google/gemini-2.5-flash-pro",
+  model: string = process.env.OPENROUTER_MODEL || "google/gemini-2.5-flash",
   temperature: number = 0.7,
   maxTokens: number = 4096
 ) {

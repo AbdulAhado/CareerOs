@@ -12,7 +12,7 @@ export interface PipelineOptions {
   temperature?: number
   /** Maximum tokens in the response */
   maxTokens?: number
-  /** Model to use (defaults to gemini-2.5-flash-pro) */
+  /** Model to use (defaults to OPENROUTER_MODEL or google/gemini-2.5-flash) */
   model?: string
   /** Whether the response should be parsed as JSON */
   expectJSON?: boolean
@@ -21,7 +21,7 @@ export interface PipelineOptions {
 const DEFAULT_OPTIONS: PipelineOptions = {
   temperature: 0.7,
   maxTokens: 4096,
-  model: "google/gemini-2.5-flash-pro",
+  model: process.env.OPENROUTER_MODEL || "google/gemini-2.5-flash",
   expectJSON: false,
 }
 
