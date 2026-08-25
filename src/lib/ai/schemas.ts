@@ -115,23 +115,23 @@ export const RESUME_SCHEMA = `{
   ${STANDARD_OUTPUT_STRUCTURE.split('\\n')[0]},
   "overallScore": <number 0-100>,
   "deepAnalysis": {
-    "executivePresence": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "businessImpact": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "ownership": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "innovation": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "decisionMaking": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "mentorship": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "technicalDepth": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "communication": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "roleAlignment": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "futureGrowth": { "score": <0-100>, "feedback": "<detailed explainability>" },
-    "industryFit": { "score": <0-100>, "feedback": "<detailed explainability>" }
+    "executivePresence": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "businessImpact": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "ownership": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "innovation": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "decisionMaking": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "mentorship": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "technicalDepth": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "communication": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "roleAlignment": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "futureGrowth": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" },
+    "industryFit": { "score": <0-100>, "feedback": "<concise 1-2 sentence feedback citing resume>" }
   },
-  "writingStyle": "<assessment of tone and grammar>",
+  "writingStyle": "<concise 1-sentence assessment of tone and grammar>",
   "priority": "<High|Medium|Low>",
-  "quickWins": ["<win1>"],
-  "longTermPlan": ["<plan1>"],
-  "nextSteps": ["<step1>"]
+  "quickWins": ["<win1>", "<win2>"],
+  "longTermPlan": ["<plan1>", "<plan2>"],
+  "nextSteps": ["<step1>", "<step2>"]
 }`
 
 // ─── Interview Questions ────────────────────────────────────
